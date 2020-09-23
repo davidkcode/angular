@@ -1,3 +1,12 @@
-<div>
-    <p>entry-list works!</p>
+<div class="list-container">
+    <div *ngFor="let entry of entryList" class="list-item">
+        <div class="icon-container">
+            <div class="image-container">
+                <img src="assets/laptop-logo.jpg" class="image" />
+            </div>
+        </div>
+        <div class="title-container">
+            <p>{{entry.title}}</p>
+        </div>
+    </div>
 </div>

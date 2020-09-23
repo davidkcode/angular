@@ -19,9 +19,10 @@ export class FinancesService {
       (entry as IFinance).bic !== undefined;
   }
 
-  public addFinanceEntry(depositor: string, iban: string, bic: string, withdrawalLimit?: number, pin?: number, note?: string) {
+  public addFinanceEntry(title: string, depositor: string, iban: string, bic: string, withdrawalLimit?: number, pin?: number, note?: string) {
     let newFinEntry: IFinance = {
       id: v4(),
+      title: title,
       depositor: depositor,
       iban: iban,
       bic: bic

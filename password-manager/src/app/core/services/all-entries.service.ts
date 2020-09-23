@@ -8,7 +8,9 @@ import { CoreModule } from '../core.module';
 
 export class AllEntriesService {
 
-  constructor(private entries: IEntry[]) { }
+  private entries: IEntry[] = [];
+
+  constructor() { }
 
   get allEntries(): IEntry[] {
     return this.entries;

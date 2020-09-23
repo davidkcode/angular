@@ -19,9 +19,10 @@ export class PasswordService {
     return (entry as IPassword).password !== undefined;
   }
 
-  public addPasswordEntry(password: string, username?: string, email?: string, pin?: number, note?: string) {
+  public addPasswordEntry(title: string, password: string, username?: string, email?: string, pin?: number, note?: string) {
     let newPwdEntry: IPassword = {
       id: v4(),
+      title: title,
       password: password
     };
 
