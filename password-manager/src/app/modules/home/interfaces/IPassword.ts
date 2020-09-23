@@ -1,8 +1,8 @@
 import { IEntry } from './IEntry';
 
 export interface IPassword extends IEntry {
+    password: string,
     username?: string,
-    password?: string,
     email?: string,
 };
 

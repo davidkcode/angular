@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { IEntry } from 'src/app/modules/home/interfaces/IEntry';
 import { CoreModule } from '../core.module';
 
 @Injectable({
@@ -7,5 +8,17 @@ import { CoreModule } from '../core.module';
 
 export class AllEntriesService {
 
-  constructor() { }
+  constructor(private entries: IEntry[]) { }
+
+  get allEntries(): IEntry[] {
+    return this.entries;
+  }
+
+  public addEntry(newEntry: IEntry) {
+    this.entries.push(newEntry);
+  }
+
+  public removeEntryById(entryToDelete: IEntry) {
+    this.entries.filter(entry => entry.id != entryToDelete.id);
+  }
 }
