@@ -1,0 +1,14 @@
+.main-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+.header-container {
+    padding: 30px 40px;
+    background-color:#ff0000;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+}
